@@ -31,7 +31,7 @@ on:
       custom_kernel_repo:
         description: 'Custom kernel repository'
         required: true
-        default: 'https://github.com/chickendrop89/device_xiaomi_unified-kernel'
+        default: 'https://github.com/rifsxd/device_xiaomi_sapphire_kernel'
         type: string
       custom_kernel_repo_branch:
         description: 'Custom kernel repository branch'
@@ -68,7 +68,7 @@ on:
       build_configs:
         description: 'Space-separated list of build configurations'
         required: true
-        default: 'build.config.gki.aarch64.chickernel build.config.gki.aarch64.chickernel.ksun build.config.gki.aarch64.chickernel.ksun.susfs'
+        default: 'build.config.gki.aarch64.sapphire build.config.gki.aarch64.sapphire.ksunext build.config.gki.aarch64.sapphire.ksunext.susfs'
         type: string
 
 jobs:
