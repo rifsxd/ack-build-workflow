@@ -199,11 +199,6 @@ jobs:
             --fetch-submodules \
             -j$(nproc --all)
 
-      - name: Hardcode KernelSU-Next Version
-        working-directory: kernel-build/common/KernelSU-Next/kernel
-        run: |
-          sed -i '/# .git is a text file while the module is imported by '\''git submodule add'\''./,/^endif/ c\ccflags-y += -DKSU_VERSION=12665' Makefile
-
       - name: Build, and process the kernel(s)
         working-directory: kernel-build
         env:
