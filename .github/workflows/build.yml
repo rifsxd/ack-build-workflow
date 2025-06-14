@@ -46,7 +46,7 @@ on:
       anykernel_url_plus_branch:
         description: 'Space-separated AnyKernel3 fork URL + (Optional) Branch'
         required: true
-        default: 'https://github.com/chickendrop89/AnyKernel3'
+        default: 'https://github.com/rifsxd/AnyKernel3-Sapphire sapphire'
         type: string
       kernel_image_type:
         description: 'Kernel image to package (Image.gz, Image.lz4, etc)'
