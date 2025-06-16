@@ -199,6 +199,11 @@ jobs:
             --fetch-submodules \
             -j$(nproc --all)
 
+      - name: Integrate KernelSU-Next
+        working-directory: kernel-build/common
+        run: |
+          curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -s next
+
       - name: Build, and process the kernel(s)
         working-directory: kernel-build
         env:
