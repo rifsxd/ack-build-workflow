@@ -68,7 +68,7 @@ on:
       build_configs:
         description: 'Space-separated list of build configurations'
         required: true
-        default: 'build.config.gki.aarch64.sapphire.ksunext'
+        default: 'build.config.gki.aarch64.sapphire.ksunext.susfs'
         type: string
 
 jobs:
@@ -202,8 +202,8 @@ jobs:
       - name: Integrate KernelSU-Next
         working-directory: kernel-build/common
         run: |
-          curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -s next
-          sed -i '/# .git is a text file while the module is imported by '\''git submodule add'\''./,/^endif/ c\ccflags-y += -DKSU_VERSION=12797' Makefile
+          curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -s next-susfs-a13-5.15
+          sed -i '/# .git is a text file while the module is imported by '\''git submodule add'\''./,/^endif/ c\ccflags-y += -DKSU_VERSION=12798' Makefile
 
       - name: Build, and process the kernel(s)
         working-directory: kernel-build
