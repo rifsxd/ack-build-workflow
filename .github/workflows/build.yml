@@ -68,7 +68,7 @@ on:
       build_configs:
         description: 'Space-separated list of build configurations'
         required: true
-        default: 'build.config.gki.aarch64.sapphire build.config.gki.aarch64.sapphire.ksunext build.config.gki.aarch64.sapphire.ksunext.susfs'
+        default: 'build.config.gki.aarch64.sapphire.ksunext'
         type: string
 
 jobs:
